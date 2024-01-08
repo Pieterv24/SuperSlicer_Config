@@ -9,4 +9,4 @@ source "{{ .chezmoi.sourceDir }}/{{ .chezmoi.sourceFile | trimSuffix ".tmpl" | r
 #ignore "exact section name without brackets" "exact key name"
 #ignore regex "section.*" "key_prefix_.*"
 #transform "section" "key" transform_name read="the docs" for="more detail on transforms"
-set "<NO_SECTION>" "print_host" {{ .super_slicer.pb_local_address }}
+set "<NO_SECTION>" "print_host" {{ .super_slicer.pb_local_address | quote }}

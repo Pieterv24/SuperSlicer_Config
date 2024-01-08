@@ -9,6 +9,6 @@ source "{{ .chezmoi.sourceDir }}/{{ .chezmoi.sourceFile | trimSuffix ".tmpl" | r
 #ignore "exact section name without brackets" "exact key name"
 #ignore regex "section.*" "key_prefix_.*"
 #transform "section" "key" transform_name read="the docs" for="more detail on transforms"
-set "<NO_SECTION>" "print_host" {{ .super_slicer.pb_address }}
-set "<NO_SECTION>" "printhost_client_cert" {{ .super_slicer.client_cert_location }}
-set "<NO_SECTION>" "printhost_client_cert_password" {{ .super_slicer.client_cert_password }}
+set "<NO_SECTION>" "print_host" {{ .super_slicer.pb_address | quote }}
+set "<NO_SECTION>" "printhost_client_cert" {{ .super_slicer.client_cert_location | quote }}
+set "<NO_SECTION>" "printhost_client_cert_password" {{ .super_slicer.client_cert_password | quote }}
