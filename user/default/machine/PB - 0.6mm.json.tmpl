@@ -1,0 +1,99 @@
+{
+    "bed_custom_model": {{ joinPath .chezmoi.targetFile "../../assets/pb/print_bed.stl" | quote }},
+    "bed_custom_texture": {{ joinPath .chezmoi.targetFile "../../assets/pb/bed_texture.png" | quote }},
+    "before_layer_change_gcode": "TIMELAPSE_TAKE_FRAME",
+    "default_filament_profile": [],
+    "default_print_profile": "",
+    "from": "User",
+    "inherits": "Voron 0.1 0.6 nozzle",
+    "is_custom_defined": "1",
+    "layer_change_gcode": "",
+    "machine_max_acceleration_e": [
+        "10000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "10000",
+        "1250"
+    ],
+    "machine_max_acceleration_retracting": [
+        "1500",
+        "1250"
+    ],
+    "machine_max_acceleration_travel": [
+        "10000",
+        "1250"
+    ],
+    "machine_max_acceleration_x": [
+        "10000",
+        "1000"
+    ],
+    "machine_max_acceleration_y": [
+        "10000",
+        "1000"
+    ],
+    "machine_max_acceleration_z": [
+        "350",
+        "200"
+    ],
+    "machine_max_jerk_x": [
+        "5",
+        "10"
+    ],
+    "machine_max_jerk_y": [
+        "5",
+        "10"
+    ],
+    "machine_max_speed_e": [
+        "120",
+        "120"
+    ],
+    "machine_max_speed_x": [
+        "450",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "450",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "30",
+        "12"
+    ],
+    "machine_start_gcode": "M104 S0 ; Stops PS/SS from sending temp waits separately\nM140 S0\nPRINT_START BED=[bed_temperature_initial_layer] HOTEND={nozzle_temperature_initial_layer[initial_extruder]} FILAMENT=[filament_type] NOZZLE={nozzle_diameter[initial_extruder]} CHAMBER=[chamber_temperature]",
+    "max_layer_height": [
+        "0.45"
+    ],
+    "min_layer_height": [
+        "0.08"
+    ],
+    "name": "PB - 0.6mm",
+    "print_host": {{ .super_slicer.pb_local_address | quote }},
+    "printer_settings_id": "PB - 0.6mm",
+    "printer_variant": "",
+    "retract_before_wipe": [
+        "0%"
+    ],
+    "retract_length_toolchange": [
+        "10"
+    ],
+    "retract_when_changing_layer": [
+        "0"
+    ],
+    "retraction_length": [
+        "0.5"
+    ],
+    "retraction_minimum_travel": [
+        "2"
+    ],
+    "single_extruder_multi_material": "0",
+    "thumbnails": "32x32/PNG, 400x300/PNG",
+    "use_firmware_retraction": "1",
+    "version": "1.6.0.0",
+    "wipe": [
+        "0"
+    ],
+    "z_hop": [
+        "0.5"
+    ]
+}
