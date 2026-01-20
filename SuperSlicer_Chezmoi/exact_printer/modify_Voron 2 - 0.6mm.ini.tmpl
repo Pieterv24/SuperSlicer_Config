@@ -9,5 +9,5 @@ source "{{ .chezmoi.sourceDir }}/{{ .chezmoi.sourceFile | trimSuffix ".tmpl" | r
 #ignore "exact section name without brackets" "exact key name"
 #ignore regex "section.*" "key_prefix_.*"
 #transform "section" "key" transform_name read="the docs" for="more detail on transforms"
-set "<NO_SECTION>" "bed_custom_model" {{ joinPath .chezmoi.targetFile "../../assets/v2/print_bed.stl" | quote }}
-set "<NO_SECTION>" "bed_custom_texture" {{ joinPath .chezmoi.targetFile "../../assets/v2/bed_texture.png" | quote }}
+set "<NO_SECTION>" "bed_custom_model" {{ joinPath .chezmoi.targetFile "../../../assets/v2/print_bed.stl" | quote }}
+set "<NO_SECTION>" "bed_custom_texture" {{ joinPath .chezmoi.targetFile "../../../assets/v2/bed_texture.png" | quote }}
